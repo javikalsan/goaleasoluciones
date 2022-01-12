@@ -1,12 +1,13 @@
 package log
 
 import (
-	"github.com/getsentry/raven-go"
 	"log"
 	"os"
+
+	"github.com/getsentry/raven-go"
 )
 
-var isSentryActive bool = false
+var isSentryActive bool = true
 
 func InitializeSentry() {
 	sentry := os.Getenv("SENTRY_DSN")
